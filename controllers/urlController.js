@@ -24,8 +24,8 @@ const urlController = {
         );
       }
 
-      const shortUrl = `http://localhost:4000/short/${randomString}`;
-      // const shortUrl = `https://url-shortener-0973.onrender.com/short/${randomString}`;
+      // const shortUrl = `http://localhost:4000/short/${randomString}`;
+      const shortUrl = `https://url-shorter-dwct.onrender.com/short/${randomString}`;
 
       const url = new urlModel({
         longURL,

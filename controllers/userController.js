@@ -65,8 +65,8 @@ const userController = {
         Math.random().toString(36).substring(2, 15);
 
       
-      const accVerificationLink = `http://localhost:3000/users/acc-verification/${randomString}`;
-      // const accVerificationLink = `https://merry-pixie-65f0af.netlify.app/users/acc-verification/${randomString}`;
+      // const accVerificationLink = `http://localhost:3000/users/acc-verification/${randomString}`;
+      const accVerificationLink = `https://clever-cajeta-6477f3.netlify.app/users/acc-verification/${randomString}`;
 
       // check if the password is correct
       const hasedPassword = await bcrypt.hash(password, 10);
@@ -157,8 +157,8 @@ const userController = {
         Math.random().toString(36).substring(2, 15) +
         Math.random().toString(36).substring(2, 15);
 
-      const link = `http://localhost:3000/users/reset-password/${randomString}`;
-      // const link = `https://merry-pixie-65f0af.netlify.app/users/reset-password/${randomString}`;
+      // const link = `http://localhost:3000/users/reset-password/${randomString}`;
+      const link = `https://clever-cajeta-6477f3.netlify.app/users/reset-password/${randomString}`;
 
       user.resetToken = randomString;
       const updateUser = await userModel.findByIdAndUpdate(user.id, user);
@@ -175,7 +175,7 @@ const userController = {
       //   sendind email to rest the password
       const sendMail = async () => {
         const info = await transporter.sendMail({
-          from: `"Hemamalini Kamaraj" <${EMAIL_ADDRESS}>`,
+          from: `"Balaganesh S" <${EMAIL_ADDRESS}>`,
           to: user.email,
           subject: "Reset Password",
           text: `Kindly use this link to reset the password - ${link}`,
